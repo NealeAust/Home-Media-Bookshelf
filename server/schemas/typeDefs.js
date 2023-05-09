@@ -14,6 +14,7 @@ type Auth {
 }
 
 type Media {
+    _id: ID
     mediaId: String
     mediaType: String
     title: String

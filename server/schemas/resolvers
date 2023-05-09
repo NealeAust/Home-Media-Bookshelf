@@ -20,11 +20,10 @@ const resolvers = {
    },
 
 
-// Media: async (parent, {media: { mediaId, mediaType, title, description, image}}) => {
-//     return Media.find({ mediaId, mediaType, title, description, image})
-// }
+media: async (parent, args) => {
+        return Media.find()
+     }
 },
-
     Mutation: {
 
         addUser: async (parent, args) => {
@@ -58,7 +57,7 @@ const resolvers = {
          },
 
         deleteMedia: async (parent, { mediaId }) => {
-        return Media.findOneAndDelete({_id: mediaId})
+        return Media.findByIdAndDelete(mediaId)
         }
     }
 };
