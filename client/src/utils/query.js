@@ -9,7 +9,18 @@ query me {
             }
     }
 }
+
+query media {
+    media
+     {
+       _id
+       
+       mediaType
+       title
+       description
+       image
+       }
+     }
+   
 `;
-
-
 
