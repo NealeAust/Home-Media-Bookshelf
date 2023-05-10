@@ -35,7 +35,7 @@ export const ADD_MEDIA = gql`
         image
              }
     }
-}
+  
 `;
 
 export const UPDATE_MEDIA = gql`
@@ -48,13 +48,13 @@ export const UPDATE_MEDIA = gql`
         description
         image
              }
-    }
+    
 }
 `;
 
 export const DELETE_MEDIA = gql`
    mutation deleteMedia ($mediaId: ID!){
-      deleteMedia(mediaId: $mediaId) {
+      deleteMedia(mediaId: $mediaId) 
       {
         mediaId
         mediaType
@@ -63,6 +63,6 @@ export const DELETE_MEDIA = gql`
         image 
             }
         }
-    }
+    
 `;
 

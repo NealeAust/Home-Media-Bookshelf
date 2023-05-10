@@ -15,8 +15,7 @@
   "author": "Neale Chapman",
   "license": "ISC",
   "dependencies": {
-    "graphql": "^16.6.0",
-    "@apollo/client": "^3.7.13",
-    "apollo-server-express": "^3.11.1"
-}
+        "concurrently": "^8.0.1"
+    
+  }
 }

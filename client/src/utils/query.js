@@ -8,13 +8,12 @@ query me {
         email
             }
     }
-}
+
 
 query media {
     media
      {
        _id
-       
        mediaType
        title
        description
