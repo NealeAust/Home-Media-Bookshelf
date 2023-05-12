@@ -83,7 +83,7 @@ h2 {
   margin-left: 25px;
 }
 
-.AboutMe {
+.Home {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
@@ -174,7 +174,7 @@ textarea {
 }
 
 /* Submit button */
-#submit {
+ #submit {
   margin-left: 50px;
   margin-top: 20px;
   height: 40px;
@@ -185,9 +185,14 @@ textarea {
   font-size: 14px;
 }
 
-#submit:hover {
+  #submit:hover {
   background-color: red;
 }
+
+
+
+
+
 
 /* Resume page styling */
 

@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_MEDIA = gql`
-  mutation addMedia($media: changedMedia) {
-    addMedia (media: {mediaId: $mediaId, mediaType: $mediaType, title: $title, description: $description, image: $image})
+  mutation addMedia($media: changedMedia!) {
+    addMedia (media: $media)
     {
         mediaId
   	    mediaType
@@ -57,12 +57,9 @@ export const DELETE_MEDIA = gql`
       deleteMedia(mediaId: $mediaId) 
       {
         mediaId
-        mediaType
-        title
-        description
-        image 
-            }
-        }
+              }
+        
+  }
     
 `;
 

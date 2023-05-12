@@ -48,8 +48,11 @@ media: async (parent, args) => {
         return {token, user};
         },
  
-        addMedia: async (parent, {media: { mediaId, mediaType, title, description, image}}) => {
-         return Media.create({ mediaId, mediaType, title, description, image})
+        addMedia: async (parent,  { media}) => {
+            console.log("IN ADDMEDIA RESOLVERS!!!!!!!!!!!")
+            console.log(media)
+            const {mediaId, mediaType, title, description, image} = media;
+         return Media.create(media)
         },
 
         updateMedia: async (parent, {changedMedia: {mediaId, mediaType, title, description, image}}) => {

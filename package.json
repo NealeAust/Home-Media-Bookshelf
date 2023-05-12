@@ -15,7 +15,7 @@
   "author": "Neale Chapman",
   "license": "ISC",
   "dependencies": {
-        "concurrently": "^8.0.1"
-    
+    "concurrently": "^8.0.1",
+    "react-bootstrap": "^2.7.4"
   }
 }
