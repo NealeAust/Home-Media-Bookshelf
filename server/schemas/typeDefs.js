@@ -40,7 +40,7 @@ type Mutation {
     loginUser(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addMedia(media: changedMedia!): Media
-    updateMedia (changedMedia: changedMedia!): Media
+    updateMedia (media: changedMedia!): Media
     deleteMedia (mediaId: ID!): Media
 }
 `;

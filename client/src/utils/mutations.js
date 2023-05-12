@@ -25,37 +25,32 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_MEDIA = gql`
-mutation addMedia {
-  addMedia (media: {mediaId: "Csss", mediaType: "DVD", title: "Die Hssssard1", description: "with vengeance" , image: "Action"})  
-    
-          {
+    mutation addMedia($media: changedMedia!) {
+        addMedia(media: $media) {
             mediaId
             mediaType
             title
             description
-            image                      
-          }
-  }
-  
+            image
+        }
+    }
 `;
 
 export const UPDATE_MEDIA = gql`
-  mutation updateMedia($media: changedMedia) {
-    updateMedia (media: {changedMedia: $mediaId, mediaType: $mediaType, title: $title, description: $description, image: $image})
-    {
-        mediaId
-  	    mediaType
-        title
-        description
-        image
-             }
-    
+mutation updateMedia($media: changedMedia!) {
+  updateMedia(media: $media) {
+      mediaId
+      mediaType
+      title
+      description
+      image
+  }
 }
 `;
 
 export const DELETE_MEDIA = gql`
    mutation deleteMedia ($mediaId: ID!){
-      deleteMedia(mediaId: $mediaId) 
+      deleteMedia(media: $media) 
       {
         mediaId
               }

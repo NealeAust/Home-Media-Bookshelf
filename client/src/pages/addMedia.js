@@ -17,9 +17,6 @@ function AddMedia() {
   const handleChange = (event) => {
     setsInputs({ ...inputs, [event.target.name]: event.target.value })
   }
-
-
-  
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(inputs)
@@ -50,8 +47,8 @@ function AddMedia() {
         <h2>Image</h2>
         <input name="image" type="text" onChange={handleChange} />
         <button id ="submit" onClick={handleSubmit}>Submit</button>
-      </div>
-    </div>
+        </div>
+     </div>
   )
 }
 

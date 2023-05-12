@@ -55,7 +55,8 @@ media: async (parent, args) => {
          return Media.create(media)
         },
 
-        updateMedia: async (parent, {changedMedia: {mediaId, mediaType, title, description, image}}) => {
+        updateMedia: async (parent, {media}) => {
+            console.log(media)
         return Media.findOneAndUpdate({ mediaId, mediaType, title, description, image })
          },
 
