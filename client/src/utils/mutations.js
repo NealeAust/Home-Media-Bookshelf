@@ -25,16 +25,17 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_MEDIA = gql`
-  mutation addMedia($media: changedMedia!) {
-    addMedia (media: $media)
-    {
-        mediaId
-  	    mediaType
-        title
-        description
-        image
-             }
-    }
+mutation addMedia {
+  addMedia (media: {mediaId: "Csss", mediaType: "DVD", title: "Die Hssssard1", description: "with vengeance" , image: "Action"})  
+    
+          {
+            mediaId
+            mediaType
+            title
+            description
+            image                      
+          }
+  }
   
 `;
 

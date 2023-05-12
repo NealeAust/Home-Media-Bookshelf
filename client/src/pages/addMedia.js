@@ -32,11 +32,9 @@ function AddMedia() {
     window.location.assign("/");
 
    } catch (err){
-    alert(err)
-    console.error(err)
+    console.log(err)
    }
-  };
-    
+  }
   return (
     <div className="container-addMed">
       <h1 id="heading" >Add Media</h1>
