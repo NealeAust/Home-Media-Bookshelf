@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <div>
-        <h1>Webpage created by Neale Chapman</h1>
+        <h3>May 2023</h3>
       </div>
       {/* Link to my Github repository */}
       <a id="github" href="https://github.com/NealeAust?tab=repositories">Github NealeAust</a>

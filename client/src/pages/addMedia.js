@@ -37,15 +37,15 @@ function AddMedia() {
       <h1 id="heading" >Add Media</h1>
       <div>
         <h2>Media ID</h2>
-        <input name="mediaId" type="text" onChange={handleChange} />
+        <input className="addMed" name="mediaId" type="text" onChange={handleChange} />
         <h2>Media Type</h2>
-        <input name="mediaType" type="text" onChange={handleChange} />
+        <input className="addMed" name="mediaType" type="text" onChange={handleChange} />
         <h2> Title</h2>
-        <input name="title" type="text" onChange={handleChange} />
+        <input className ="addMed" name="title" type="text" onChange={handleChange} />
         <h2>Description</h2>
-        <input name="description" type="text" onChange={handleChange} />
+        <input className="addMed" name="description" type="text" onChange={handleChange} />
         <h2>Image</h2>
-        <input name="image" type="text" onChange={handleChange} />
+        <input className="addMed" name="image" type="text" onChange={handleChange} />
         <button id ="submit" onClick={handleSubmit}>Submit</button>
         </div>
      </div>

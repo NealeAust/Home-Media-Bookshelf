@@ -14,7 +14,7 @@ const SignupForm = () => {
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
-  
+
   const [addUser, { error }] = useMutation(ADD_USER)
 
   const handleChange = (event) => {
@@ -22,7 +22,7 @@ const SignupForm = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
@@ -30,17 +30,17 @@ const SignupForm = () => {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-         }
+    }
 
     try {
-       // execute addUser mutation and pass in variable data from form
-       const { data } = await addUser({
-        variables: { ...userFormData}
+      // execute addUser mutation and pass in variable data from form
+      const { data } = await addUser({
+        variables: { ...userFormData }
       });
 
       Auth.login(data.addUser.token)
 
-    } catch (e) {
+    } catch (error) {
       console.error(error);
       setShowAlert(true);
     }
@@ -55,15 +55,17 @@ const SignupForm = () => {
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <div className="container-signup">
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
 
         <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
+          <Form.Label className="signup-label" htmlFor='username'>Username</Form.Label>
           <Form.Control
+            id="control"
             type='text'
             placeholder='Your username'
             name='username'
@@ -71,12 +73,13 @@ const SignupForm = () => {
             value={userFormData.username}
             required
           />
-          <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
+          <Form.Control.Feedback className="signup-message" type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className='mb-3'>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Label className="signup-label" htmlFor='email'>Email</Form.Label>
           <Form.Control
+            id="control"
             type='email'
             placeholder='Your email address'
             name='email'
@@ -84,12 +87,13 @@ const SignupForm = () => {
             value={userFormData.email}
             required
           />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+          <Form.Control.Feedback className="signup-message" type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label className="signup-label" htmlFor='password'>Password</Form.Label>
           <Form.Control
+          id="control"
             type='password'
             placeholder='Your password'
             name='password'
@@ -97,15 +101,17 @@ const SignupForm = () => {
             value={userFormData.password}
             required
           />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+          <Form.Control.Feedback className="signup-message" type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
-          <Button
+        <Button
+          id="submit"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
         </Button>
       </Form>
+      </div>
     </>
   );
 };

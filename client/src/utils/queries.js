@@ -8,18 +8,19 @@ query me {
         email
             }
     }
+`;
 
-
+export const GET_MEDIA = gql`
 query media {
     media
      {
        _id
+       
        mediaType
        title
        description
        image
        }
      }
-   
 `;
 

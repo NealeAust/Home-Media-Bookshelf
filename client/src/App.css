@@ -10,21 +10,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 92%;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-left: 25px;
   justify-content: space-between;
   padding: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #9ad7aa;
+  background-color: #052d2f;
   color: #ffffff;
-}
-
-/* Group selector */
-header h1 {
-  display: inline-block;
-  letter-spacing: 6px;
-  font-size: 35px;
-  font-family: Helvetica;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 nav {
@@ -33,16 +27,27 @@ nav {
 }
 
 /* <header> including navigation links */
-ul #link {
+.Link {
+  display:flex;
+  flex-wrap:wrap;
   margin-right: 10px;
-  margin-top:14px;
+  margin-top: 25px;
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px black;
-  
+}
+
+#link {
+  color: white;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+#logsign {
+  display: flex;
+  margin-left: 25px;
+  color: rgb(81, 255, 0);
 }
 
 /* Group selector */
@@ -55,7 +60,6 @@ header nav ul {
 
 #link {
   display: inline-block;
-  margin-left: 20px;
 }
 
 /* About Me page styling */
@@ -67,21 +71,47 @@ h4 {
   text-decoration: none;
 }
 
- #link:hover {
+#link:hover {
   color: yellow;
   font-size: 27px;
 }
 
-/* About Me component page*/
-
-h2 {
-  margin-left: 40px;
+.Bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  width: 92%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #292997;
+  background-color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+ font-size: 25px;
+ letter-spacing: .5px;
+}
+
+#home h2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #292997;
+  background-color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+ font-size: 23px;
+ letter-spacing: 1px;
+ 
+}
+
+h2 {
+  margin-left: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .my-pic {
-  width: 95%;
+  width: 94.15%;
+  height:550px;
   margin-left: 25px;
 }
 
@@ -96,62 +126,66 @@ h2 {
   font-size: 20px;
 }
 
-/* Portfolio page styling */
-
-/* ClassName 'Card' used for each application presented*/
-.card {
-  display: inline-block;
-  margin-top: 3px;
-  margin-left: 25px;
-  height: 310px;
-  width: 30%;
-  border-style: dashed;
-  border-color: #80808049;
-}
-
-.card h4 {
-  margin-top: 2px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  font-size: 22px;
-}
-
-.card a {
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 35px;
-}
-
-.card img {
-  margin-top: 10px;
-  margin-left: 10px;
-  ;
-  margin-right: auto;
-  height: 225px;
-  width: 425px;
-}
-
 /* ContactMe page styling */
 
 .container {
   width: 36%;
   height: 450px;
-  margin: 60px auto;
+  margin: 10px auto;
   border-style: solid;
   border-color: #80808049;
-  align-items: center;
+  /* align-items: center; */
   background-color: #e6f1e6;
 }
 
+.container-addMed {
+  width: 36%;
+  height: 545px;
+  margin: 10px auto;
+  border-style: solid;
+  border-color: #80808049;
+  align-items: center;
+  background-color: #bee2f2;
+}
+
+.container-updateMed {
+  width: 36%;
+  height: 545px;
+  margin: 10px auto;
+  border-style: solid;
+  border-color: #80808049;
+  align-items: center;
+  background-color: #ffe7dc;
+}
+
+.container-deleteMedia {
+  width: 36%;
+  height: 230px;
+  margin: 10px auto;
+  border-style: solid;
+  border-color: #80808049;
+  align-items: center;
+  background-color: #938f9030;
+}
+
+.delMedia,
+.updateMed,
+.addMed {
+  height: 30px;
+  width: 84%;
+  margin: 10px 10px;
+  font-size: 20px;
+}
+
 #heading {
- text-align: center;
- color: black;
- font-size: 28px;
+  text-align: center;
+  color: black;
+  font-size: 28px;
 }
 
 label {
   margin-left: 50px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 490;
 }
 
@@ -162,7 +196,7 @@ form label input {
   margin: 10px 50px;
   border-color: #80808049;
   padding-left: 5px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 textarea {
@@ -172,11 +206,11 @@ textarea {
   margin: 10px 50px;
   border-color: #80808049;
   padding: 5px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* Submit button */
- #submit {
+#submit {
   margin-left: 50px;
   margin-top: 20px;
   height: 40px;
@@ -187,74 +221,121 @@ textarea {
   font-size: 14px;
 }
 
-  #submit:hover {
+#submit:hover {
   background-color: red;
 }
 
+.container-login {
+  width: 36%;
+  height: 360px;
+  margin: 40px auto;
+  border-style: solid;
+  border-color: black;
+  align-items: center;
+  background-color: white;
+  padding:25px;
+}
+
+
+.container-signup {
+  width: 36%;
+  height: 48 0px;
+  margin: 30px auto;
+  border-style: solid;
+  border-color: black;
+  align-items: center;
+  background-color: white;
+  padding:25px;
+}
 
 
 
-
-
-/* Resume page styling */
-
-h8 {
-  margin-left: 25px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+.signup-label,
+.login-label{
+  margin-left: 50px;
+  margin-top:30px;
+  margin-right: 10px;
+  padding-bottom:10px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 490;
 }
-
-li {
-  margin-left: 10px;
-}
-
-h6 {
-  margin-left: 20px;
-  margin-bottom: 8px;
-  margin-top: 5px;
+.signup-message,
+.login-message{
+  margin-left: 50px;
+  padding-top:5px;
+  margin-right: 10px;
+  padding-bottom:20px;
   font-size: 20px;
-  color: black;
+  font-weight: 800;
+  color: blue
 }
+
+.signup-message,
+.login-message {
+  color: #0026ff;
+  animation: animate 1.5s linear infinite;
+
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#control {
+  display: block;
+  width: 84%;
+  height: 40px;
+  margin: 10px 50px;
+  border-color: #80808049;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+
 
 /* Footer styling */
-
 footer {
   display: flex;
-  flex-wrap: wrap;
-  width: 92%;
-  height: 60px;
-  margin-top: 25px;
-  margin-left: 25px;
+  flex-wrap:wrap;
+  width: 94.15%;
+  height: 40px;
+  margin-left:25px;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   position: absolute;
-  bottom: 70px;
+  bottom: 15px;
   left: 0;
+  
 }
 
-/* Background color */
+/* Background color  */
 footer {
   overflow: visible !important;
-  background: linear-gradient(45deg, #aaf1c9 25%, #6cf785 75%);
+  background: linear-gradient(45deg, #aaf1c9 25%, #6cf785 75%); 
 }
 
 /* Link to my repository */
 #github {
-  margin: 15px;
+  margin-top:15px;
   font-size: 20px;
   color: blue;
+  /* float: right; */
+
 }
-
-
-
-
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -264,4 +345,27 @@ footer {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Allows flex */
+@media screen and (max-width: 1183px) {
+  header nav ul {
+    display:flex-wrap;
+    flex-wrap:wrap;
+    margin-left: 1px;
+    margin-top: 10px;
+    float:left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  }
+
+@media screen and (max-width: 504px) {
+ .large-font {
+   font-size: 2em;
+  }
+
 }

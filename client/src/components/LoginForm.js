@@ -19,7 +19,7 @@ const LoginForm = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
@@ -49,13 +49,15 @@ const LoginForm = () => {
 
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+    <div className="container-login">
+        <Form noValidate validated={validated} onSubmit={handleSubmit} >
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+        <Form.Group >
+          <Form.Label className="login-label" htmlFor='email'>Email</Form.Label>
           <Form.Control
+            id="control"
             type='text'
             placeholder='Your email'
             name='email'
@@ -63,12 +65,13 @@ const LoginForm = () => {
             value={userFormData.email}
             required
           />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+          <Form.Control.Feedback className="login-message" type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label className="login-label" htmlFor='password'>Password</Form.Label>
           <Form.Control
+            id="control"
             type='password'
             placeholder='Your password'
             name='password'
@@ -76,15 +79,17 @@ const LoginForm = () => {
             value={userFormData.password}
             required
           />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+          <Form.Control.Feedback className="login-message" type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
+          id="submit"
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
         </Button>
       </Form>
+    </div>
     </>
   );
 };

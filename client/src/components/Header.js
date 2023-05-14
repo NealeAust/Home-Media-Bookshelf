@@ -6,28 +6,19 @@ function Header({ handlePageChange }) {
 
   return (
     <header>
-      <h1>Neales Bookshelf</h1>
-      <div>
+      <h1>Home Media Bookshelf</h1>
+      <div className = "Link">
         {/*User clicks on title to navigate to selected page (open page window)*/}
         <nav>
           <ul>
-            {/* <li onClick={() => handlePageChange("Home")} > Home </li>
-            <li onClick={() => handlePageChange("Library")}> Library </li>
-            <li onClick={() => handlePageChange("Add")}> Add </li>
-            <li onClick={() => handlePageChange("Update")}> Update </li>
-            <li onClick={() => handlePageChange("Delete")}> Delete </li>
-            <li onClick={() => handlePageChange("Contact")}> Contact </li>
-            <li onClick={() => handlePageChange("Login")}> Login </li> */}
-            <Link to="/">Home</Link>
-            <Link to="/Library">Library</Link>
-            <Link to="/AddMedia">Add</Link>
-            <Link to= "/UpdateMedia">Update</Link>
-            <Link to="/DeleteMedia">Delete</Link>
-            <Link to="/Contact">Contact</Link>
-            <Link to="/LoginForm">LoginForm</Link>
-            <Link to="/SignupForm">SignupForm</Link>
-            
-            
+            <Link id="link" to="/">Home</Link>
+            <Link id="link" to="/Library">Library</Link>
+            <Link id="link" to="/AddMedia">Add</Link>
+            <Link id="link" to= "/UpdateMedia">Update</Link>
+            <Link id="link" to="/DeleteMedia">Delete</Link>
+            <Link id="link" to="/Contact">Contact</Link>
+            <Link id="logsign" to="/LoginForm">Login</Link>
+            <Link id="logsign" to="/SignupForm">Signup</Link>                       
             </ul>
         </nav>
       </div>

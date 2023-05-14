@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const mediaSchema = new Schema({
 
-    mediaId: {
+        mediaId: {
         type: String,
         required: true,
     },
