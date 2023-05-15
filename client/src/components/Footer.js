@@ -8,7 +8,7 @@ function Footer() {
         <h3>May 2023</h3>
       </div>
       {/* Link to my Github repository */}
-      <a id="github" href="https://github.com/NealeAust?tab=repositories">Github NealeAust</a>
+      <a id="github" href="https://github.com/NealeAust/Home-Media-Bookshelf/blob/main/client/src/components/Footer.js">Github NealeAust</a>
     </footer>
   );
 }
