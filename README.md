@@ -64,7 +64,7 @@ The Home Media Library Webpage has been created as the final project of the codi
 The high-level steps I took to create this application are as follows:
 
 - To commence the project, I installed React.js which automatically installed most of the front-end folders and some files. I then created a file structure for the back end.
-- I then mainly focussed on the back end 'server' side. That is coding the server.js, models, typeDefs and resolvers.
+- At first I mainly focussed on the back end 'server' side. That is coding the server.js, models, typeDefs and resolvers.
 - Getting the resolvers and queries to work in GraphQL was challenging.
 - Once these were working, I moved to the front-end creating components and focussed on linking them to the backend.
 
@@ -80,13 +80,18 @@ The Home Media Bookshelf webpage is a fully functional web application.
 
 When first opened the application defaults to the Home page window, between the constant Header and Footer sections.
 
-To use the application the user clicks on the required link and fills out and submits the form.
+The application was purposely designed and built to be user friendly. 
+- Firstly, the user clicks on Login or Signup link, completes there required details and presses the submit button. Once logged in
+- The user simply clicks on the required menu option located in the header except for the Library section the user fills out the form displayed and clicks on the submit button.
+- Note that the Contact section allows the user to send me a message.
+- To navigate through the application the user clicks on the relevant menu option located in the header.
+- A link to the project github repository is located in the footer on the far-right side.
 
 ## Deployed Application and Screenshot
 
 Link to deployed application:
 
-https://nealeaust.github.io/React-Portfolio-V1/
+https://evening-lake-81458.herokuapp.com/
 
 Screenshot:
 
@@ -99,3 +104,4 @@ N/A
 ## Licence
 
 MIT
+
