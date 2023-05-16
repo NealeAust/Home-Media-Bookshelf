@@ -87,6 +87,12 @@ The application was purposely designed and built to be user friendly.
 - To navigate through the application the user clicks on the relevant menu option located in the header.
 - A link to the project github repository is located in the footer on the far-right side.
 
+## Video
+
+The following video demonstrates that the application is connecting the MongoDB Atlas and creating, deleting and partiallu updating records.
+*Unfortunately I could not get the media query working from the front-end in Libray.js page.
+
+https://drive.google.com/file/d/1ZvWtxgh_PXuJnaLt51EFiZmkU989DUbj/view
 
 
 ## Deployed Application and Screenshot
