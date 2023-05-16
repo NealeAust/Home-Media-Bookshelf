@@ -87,6 +87,8 @@ The application was purposely designed and built to be user friendly.
 - To navigate through the application the user clicks on the relevant menu option located in the header.
 - A link to the project github repository is located in the footer on the far-right side.
 
+
+
 ## Deployed Application and Screenshot
 
 Link to deployed application:
